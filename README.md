@@ -10,8 +10,7 @@ This microservice architecture consists of five microservices designed to handle
 - [Data Storage Service](#Service5)
 - [Confirmation that the project is working](#Confirmation)
 
-![Alt text](/screenshots_for_github/project_schema.png?raw=true "Project Schema")
-
+![Alt text](screenshots_for_github/project_schema.PNG?raw=true "Project Schema")
 ## Sender Service
 
 ### Description
@@ -259,10 +258,10 @@ services:
 ```
 ## Confirmation that the project is working
 - Let's start with saving data by the endpoint service. As you can see, the Clients Data table successfully saves data by clientID:
-![Alt text](/screenshots_for_github/database_table.png?raw=true "Data from table")
+![Alt text](screenshots_for_github/database_table.PNG?raw=true "Data from table")
 
 - Working architecture and deployed project in Docker:
-  ![Alt text](/screenshots_for_github/docker_structure.png?raw=true "Docker structure")
+  ![Alt text](screenshots_for_github/docker_structure.PNG?raw=true "Docker structure")
 - Logs from the raised project:
 ```terminal
 sender_service-1           | 2024-07-25T16:51:02.821Z  INFO 1 --- [sender_service] [nio-8093-exec-2] c.e.s.s.impls.ClientDataServiceImpl      : Sending client data by id 3123
@@ -276,11 +275,11 @@ third_receiver_service-1   | 2024-07-25T16:51:02.967Z  INFO 1 --- [third_receive
 data_storage_service-1     | 2024-07-25T16:51:02.979Z  INFO 1 --- [data_storage_service] [ntContainer#0-1] c.e.d.c.RabbitMQDataStorageConfiguration : Message read from furth queue: ClientDataDTO(clientId=3123, firstName=John, lastName=Doe, email=john.doe@example.com, phoneNumber=555-555-5555, address=123 Main Street, cardNumbers=[5555 3333 6666 8888, 2222 1111 4444 5555], savedContacts=[SavedContactsDTO(contactName=Valeria, contactNumber=555 888 333 444), SavedContactsDTO(contactName=Jack, contactNumber=666 777 444 333)])
 ```
 - RabbitMQ overview data:
-  ![Alt text](/screenshots_for_github/rabbitmq_overview.png?raw=true "RabbitMQ overview")
+  ![Alt text](screenshots_for_github/rabbitmq_overview.PNG?raw=true "RabbitMQ overview")
 - RabbitMQ exchanges:
-  ![Alt text](/screenshots_for_github/rabbitmq_exchanges.png?raw=true "RabbitMQ exchanges")
+  ![Alt text](screenshots_for_github/rabbitmq_exchanges.PNG?raw=true "RabbitMQ exchanges")
 - RabbitMQ queses:
-  ![Alt text](/screenshots_for_github/rabbitmq_queues.png?raw=true "RabbitMQ queses")
+  ![Alt text](screenshots_for_github/rabbitmq_queues.PNG?raw=true "RabbitMQ queses")
 ## Performance Improvements
 
 The following steps can be used to improve the performance of services:
